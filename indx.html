@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        overflow: hidden;
+        background-image: url("bs.jpg");
+        /* background-size: cover; */
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      const section = document.querySelector(".container");
+
+      window.onmousemove = function (event) {
+        const xAxis = (event.x * -1) / 15;
+        const yAxis = (event.y * -1) / 15;
+
+        // section.style.backgroundPosition (xAxis + "px", yAxis + "px");
+        // console.log(section.style);
+        section.style.backgroundPositionX = xAxis + "px";
+        section.style.backgroundPositionY = yAxis + "px";
+      };
+    </script>
+  </body>
+</html>
